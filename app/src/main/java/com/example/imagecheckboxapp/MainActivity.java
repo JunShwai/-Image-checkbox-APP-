@@ -1,13 +1,13 @@
-package com.example.imagecheckboxapp;
+package com.example.lifecycle;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
+
+import com.example.imagecheckboxapp.R;
 
 public class MainActivity extends AppCompatActivity {
     CheckBox chk;
@@ -17,16 +17,42 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        imgMina = findViewById(R.id.imgMina);
+        imgMomo = findViewById(R.id.imgMomo);
+        imgSana = findViewById(R.id.imgSana);
+        imgTzuyu = findViewById(R.id.imgTzuyu);
+
+        imgMina.setVisibility(View.GONE);
+        imgMomo.setVisibility(View.GONE);
+        imgSana.setVisibility(View.GONE);
+        imgTzuyu.setVisibility(View.GONE);
     }
 
     public void btnOK(View view) {
-        TextView txvLike = findViewById(R.id.txvLike);
-        RadioGroup kGirlGroup = findViewById(R.id.kGirlGroup);
 
-        int id = kGirlGroup.getCheckedRadioButtonId();
-        RadioButton selected = findViewById(id);
+        imgMina.setVisibility(View.GONE);
+        imgMomo.setVisibility(View.GONE);
+        imgSana.setVisibility(View.GONE);
+        imgTzuyu.setVisibility(View.GONE);
 
-        txvLike.setText("我的最愛是 :" + selected.toString());
+        int[] id ={R.id.chkMina,R.id.chkMomo,R.id.chkSana,R.id.chkTzuyu};
+
+        for(int i:id){
+
+            chk = findViewById(i);
+
+            if(chk.isChecked()){
+                if(chk.getId() == R.id.chkMina)
+                    imgMina.setVisibility(View.VISIBLE);
+                if(chk.getId() == R.id.chkMomo)
+                    imgMomo.setVisibility(View.VISIBLE);
+                if(chk.getId() == R.id.chkSana)
+                    imgSana.setVisibility(View.VISIBLE);
+                if(chk.getId() == R.id.chkTzuyu)
+                    imgTzuyu.setVisibility(View.VISIBLE);
+            }
+        }
+
     }
-
 }

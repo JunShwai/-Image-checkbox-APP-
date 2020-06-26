@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imgMina" type="id" />
+    <item name="imgMomo" type="id" />
+    <item name="imgSana" type="id" />
+    <item name="imgTzuyu" type="id" />
+    <item name="chkMina" type="id" />
+    <item name="chkMomo" type="id" />
+    <item name="chkSana" type="id" />
+    <item name="chkTzuyu" type="id" />
+</resources>

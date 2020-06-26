@@ -6,38 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/chkTzuyu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tzuyu"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/chkSana" />
-
-    <CheckBox
-        android:id="@+id/chkSana"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Sana"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <CheckBox
-        android:id="@+id/chkMina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mina"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/chkMomo" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="請選出你喜歡的女星"
@@ -48,87 +23,80 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:srcCompat="@drawable/momo"
-        tools:layout_editor_absoluteY="57dp" />
+        tools:layout_editor_absoluteY="75dp" />
 
     <ImageView
         android:id="@+id/imgMomo"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/momo"
-        tools:layout_editor_absoluteY="616dp" />
+        tools:layout_editor_absoluteY="600dp"
+        tools:visibility="invisible" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="95dp"
-        android:layout_height="85dp"
-        app:srcCompat="@drawable/mina"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="57dp" />
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/mina" />
 
     <ImageView
         android:id="@+id/imgMina"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/imgMomo"
+        app:layout_constraintTop_toTopOf="@+id/imgMomo"
         app:srcCompat="@drawable/mina"
-        tools:layout_editor_absoluteY="616dp" />
+        tools:visibility="invisible" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:srcCompat="@drawable/sana"
-        tools:layout_editor_absoluteY="203dp" />
+        tools:layout_editor_absoluteY="247dp" />
 
     <ImageView
         android:id="@+id/imgSana"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/imgMina"
+        app:layout_constraintTop_toTopOf="@+id/imgMina"
         app:srcCompat="@drawable/sana"
-        tools:layout_editor_absoluteY="616dp" />
+        tools:visibility="invisible" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="95dp"
-        android:layout_height="85dp"
-        app:srcCompat="@drawable/tzuyu"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="203dp" />
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/tzuyu" />
 
     <ImageView
         android:id="@+id/imgTzuyu"
         android:layout_width="95dp"
-        android:layout_height="85dp"
+        android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/imgSana"
+        app:layout_constraintTop_toTopOf="@+id/imgSana"
         app:srcCompat="@drawable/tzuyu"
-        tools:layout_editor_absoluteY="616dp" />
-
-    <CheckBox
-        android:id="@+id/chkMomo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Momo"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="32dp" />
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/button"
@@ -142,6 +110,7 @@
         android:onClick="btnOK"
         android:text="送出"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chkTzuyu" />
 
@@ -149,8 +118,43 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="我喜歡的有 :"
         android:textColor="@android:color/holo_red_light"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        tools:layout_editor_absoluteY="447dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <CheckBox
+        android:id="@+id/chkMomo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Momo"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/chkMina" />
+
+    <CheckBox
+        android:id="@+id/chkMina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mina"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <CheckBox
+        android:id="@+id/chkSana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sana"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/chkTzuyu" />
+
+    <CheckBox
+        android:id="@+id/chkTzuyu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tzuyu"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
